@@ -9,6 +9,8 @@ const Dashboard = () => {
   const handleLogout = () => {
     axios.get("http://localhost:3000/auth/logout").then((result) => {
       if (result.data.Status) {
+        //To remove the vaalid value to exit the user to protect the route
+        //getting back to the dashboard page
         localStorage.removeItem("valid");
         navigate("/");
       }

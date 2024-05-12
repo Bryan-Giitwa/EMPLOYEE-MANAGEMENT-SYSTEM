@@ -57,7 +57,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
 });
-// end imag eupload
+// end image upload
 
 router.post("/add_employee", upload.single("image"), (req, res) => {
   const sql = `INSERT INTO employee 
